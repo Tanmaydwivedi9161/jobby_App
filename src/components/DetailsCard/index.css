@@ -1,80 +1,80 @@
-.jobcard-container{
-    list-style: none;
-    background-color:  #272727;
-    padding: 20px;
-    border-radius: 10px;
+.jobcard-container {
+  list-style: none;
+  background-color: #272727;
+  padding: 20px;
+  border-radius: 10px;
 }
-.company-logo-box{
-    display: flex;
-    gap: 20px;
-    align-items: center;
+.company-logo-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
-.title{
-    color: #ffffff;
-    font-size: 24px;
+.title {
+  color: #ffffff;
+  font-size: 24px;
 }
-.title-rating-box{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.title-rating-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.rating-card{
-    display: flex;
-    gap: 10px;
-    align-items: center;
+.rating-card {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
-.company-logo{
-    max-width: 70px;
-    width: 100%;
+.company-logo {
+  max-width: 70px;
+  width: 100%;
 }
-.rating-icon{
-    color:  #fbbf24;
+.rating-icon {
+  color: #fbbf24;
 }
-.rating{
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
+.rating {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
 }
-.location-icon{
-    color: #f8fafc;
-    font-size: 25px;
+.location-icon {
+  color: #f8fafc;
+  font-size: 25px;
 }
-.location-para{
-    color: #f8fafc;
+.location-para {
+  color: #f8fafc;
 }
-.location-card{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.location-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.location-and-job-type-card{
-    display: flex;
-    gap: 30px;
-    margin-top: 20px;
+.location-and-job-type-card {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
 }
-.line{
-    background-color: #f8fafc;
-    margin-top: 10px;
+.line {
+  background-color: #f8fafc;
+  margin-top: 10px;
 }
-.location{
-    display: flex;
-    gap: 10px;
-    align-items: center;
+.location {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
-.lpa-para{
-    color: #f8fafc;
-    font-size: 18px;
+.lpa-para {
+  color: #f8fafc;
+  font-size: 18px;
 }
-.description-box{
-    margin-top: 20px;
+.description-box {
+  margin-top: 20px;
 }
-.description-heading{
-    color: #f8fafc;
-    margin-top: 10px;
+.description-heading {
+  color: #f8fafc;
+  margin-top: 10px;
 }
-.description-para{
-    color: #f8fafc;
-    margin-top: 10px;
+.description-para {
+  color: #f8fafc;
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
@@ -124,79 +124,78 @@
   }
 }
 
-.job-link{
+.job-link {
   text-decoration: none;
 }
 
 .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    list-style: none;
-    padding: 0;
-    margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
 }
-.skills-container{
-    margin-top: 20px;
+.skills-container {
+  margin-top: 20px;
 }
 .skill-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.skills{
-    color: #ffffff;
+.skills {
+  color: #ffffff;
 }
-.skill-icon{
-    max-width: 60px;
-    width: 100%;
+.skill-icon {
+  max-width: 60px;
+  width: 100%;
 }
-.skill-name{
-    color: #f8fafc;
-    font-size: 18px;
+.skill-name {
+  color: #f8fafc;
+  font-size: 18px;
 }
-
 
 .life-at-company-container {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .section-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .life-at-company-content {
-    display: flex;
-    gap: 80px;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .life-description {
-    font-size: 16px;
-    line-height: 1.6;
-    color:#f8fafc;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #f8fafc;
 }
 
 .life-image {
-    max-width: 350px;
-    width: 100%;
-    border-radius: 8px;
-    /* object-fit: cover; */
+  max-width: 350px;
+  width: 100%;
+  border-radius: 8px;
+  /* object-fit: cover; */
 }
-.life-heading{
-    color: #ffffff;
+.life-heading {
+  color: #ffffff;
 }
 /* Responsive styles */
 @media screen and (max-width: 768px) {
-    .life-at-company-content {
-        flex-direction: column;
-    }
+  .life-at-company-content {
+    flex-direction: column;
+  }
 
-    .life-description,
-    .life-image {
-        width: 100%;
-    }
+  .life-description,
+  .life-image {
+    width: 100%;
+  }
 }
