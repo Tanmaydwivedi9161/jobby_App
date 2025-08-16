@@ -1,39 +1,37 @@
-
-
-.profile-card{
-    background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
-    background-size: cover;
-    padding: 20px;
+.profile-card {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  padding: 20px;
 }
-.profile-img{
-    max-width: 50px;
-    width: 100%;
+.profile-img {
+  max-width: 50px;
+  width: 100%;
 }
-.profile-name{
-    color:  #4f46e5;
-    font-size: 22px;
-    margin-top: 10px;
+.profile-name {
+  color: #4f46e5;
+  font-size: 22px;
+  margin-top: 10px;
 }
-.profile-bio{
-    color:  #64748b;
-    margin-top: 15px;
+.profile-bio {
+  color: #64748b;
+  margin-top: 15px;
 }
-.filter-title{
-    color: #f8fafc;
-    font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.filter-title {
+  color: #f8fafc;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-label{
-    color: #cbd5e1;
+label {
+  color: #cbd5e1;
 }
-.radio-item{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.checkbox-item{
-     display: flex;
-    align-items: center;
-    gap: 10px;
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

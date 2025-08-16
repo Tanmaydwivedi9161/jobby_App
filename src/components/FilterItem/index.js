@@ -16,6 +16,14 @@ const salaryRangesList = [
   {salaryRangeId: '4000000', label: '40 LPA and above'},
 ]
 
+const locationsList = [
+  {label: 'Hyderabad', locationId: 'HYDERABAD'},
+  {label: 'Bangalore', locationId: 'BANGALORE'},
+  {label: 'Chennai', locationId: 'CHENNAI'},
+  {label: 'Delhi', locationId: 'DELHI'},
+  {label: 'Mumbai', locationId: 'MUMBAI'},
+]
+
 class FilterItem extends Component {
   state = {
     profileDetails: {},
@@ -34,6 +42,12 @@ class FilterItem extends Component {
   handleSalaryChange = event => {
     const {onChangeSalaryRange} = this.props
     onChangeSalaryRange(event.target.id)
+  }
+
+  handleLocationChange = event => {
+    const {onChangeLocation} = this.props
+    const {id, checked} = event.target
+    onChangeLocation(id, checked)
   }
 
   getUserDetails = async () => {
@@ -63,6 +77,7 @@ class FilterItem extends Component {
 
     return (
       <div className="filter-item-container">
+        {/* Profile Section */}
         <div className="profile-card">
           <img src={profileImageUrl} alt="profile" className="profile-img" />
           <h1 className="profile-name">{name}</h1>
@@ -70,6 +85,7 @@ class FilterItem extends Component {
         </div>
         <hr className="line" />
 
+        {/* Employment Type */}
         <div className="filter-section">
           <h2 className="filter-title">Type of Employment</h2>
           {employmentTypesList.map(each => (
@@ -86,6 +102,7 @@ class FilterItem extends Component {
 
         <hr className="line" />
 
+        {/* Salary Range */}
         <div className="filter-section">
           <h2 className="filter-title">Salary Range</h2>
           {salaryRangesList.map(each => (
@@ -97,6 +114,23 @@ class FilterItem extends Component {
                 onChange={this.handleSalaryChange}
               />
               <label htmlFor={each.salaryRangeId}>{each.label}</label>
+            </div>
+          ))}
+        </div>
+
+        <hr className="line" />
+
+        {/* Location Filter */}
+        <div className="filter-section">
+          <h2 className="filter-title">Location</h2>
+          {locationsList.map(each => (
+            <div key={each.locationId} className="checkbox-item">
+              <input
+                type="checkbox"
+                id={each.locationId}
+                onChange={this.handleLocationChange}
+              />
+              <label htmlFor={each.locationId}>{each.label}</label>
             </div>
           ))}
         </div>

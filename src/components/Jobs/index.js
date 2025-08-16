@@ -20,6 +20,7 @@ class Jobs extends Component {
     searchInput: '',
     employmentTypes: [],
     salaryRange: '',
+    locations: [],
     apiStatus: apiStatusConstants.INITIAL,
   }
 
@@ -45,6 +46,16 @@ class Jobs extends Component {
     }, this.getAllJobs)
   }
 
+  onChangeLocation = (locationId, isChecked) => {
+    this.setState(prevState => {
+      const {locations} = prevState
+      if (isChecked) {
+        return {locations: [...locations, locationId]}
+      }
+      return {locations: locations.filter(loc => loc !== locationId)}
+    }, this.getAllJobs)
+  }
+
   onChangeSalaryRange = salaryRangeId => {
     this.setState({salaryRange: salaryRangeId}, this.getAllJobs)
   }
@@ -67,10 +78,12 @@ class Jobs extends Component {
   getAllJobs = async () => {
     this.setState({apiStatus: apiStatusConstants.IN_PROGRESS})
     const jwtToken = Cookies.get('jwt_token')
-    const {employmentTypes, salaryRange, searchInput} = this.state
+    const {employmentTypes, salaryRange, searchInput, locations} = this.state
 
     const employmentParam = employmentTypes.join(',')
-    const url = `https://apis.ccbp.in/jobs?employment_type=${employmentParam}&minimum_package=${salaryRange}&search=${searchInput}`
+    const locationParams = locations.map(loc => `location=${loc}`).join('&')
+
+    const url = `https://apis.ccbp.in/jobs?employment_type=${employmentParam}&minimum_package=${salaryRange}&search=${searchInput}&${locationParams}`
 
     const options = {
       method: 'GET',
@@ -88,9 +101,7 @@ class Jobs extends Component {
         apiStatus: apiStatusConstants.SUCCESS,
       })
     } else {
-      this.setState({
-        apiStatus: apiStatusConstants.FAILURE,
-      })
+      this.setState({apiStatus: apiStatusConstants.FAILURE})
     }
   }
 
@@ -172,6 +183,7 @@ class Jobs extends Component {
             <FilterItem
               onChangeEmploymentType={this.onChangeEmploymentType}
               onChangeSalaryRange={this.onChangeSalaryRange}
+              onChangeLocation={this.onChangeLocation}
             />
           </div>
           <div className="job-content">
